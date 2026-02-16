@@ -184,7 +184,7 @@ elif page == "🔮 Single Prediction":
                 st.metric("", "Not Eligible ⚠️", delta="0%", delta_color="inverse")
                 st.info(f"**Eligibility Probability: {prediction_prob[1]*100:.2f}%**")
             else:
-                st.metric("Churn Status", "Eligible ✅", delta="High Risk", delta_color="off")
+                st.metric("Eligibility Status", "Eligible ✅")
                 st.warning(f"**Eligibility Probability: {prediction_prob[1]*100:.2f}%**")
         
         with col2:
