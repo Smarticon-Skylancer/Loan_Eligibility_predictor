@@ -36,7 +36,7 @@ st.markdown("<h1 class='main-header'>📊 Loan Eligibility Prediction Dashboard<
 @st.cache_resource
 def load_model():
     try:
-        with open(r'note_books\Loan_Random_model.pkl', 'rb') as f:
+        with open(r'Loan_Random_model.pkl', 'rb') as f:
             model = pickle.load(f)
             return model
     except Exception as e:
@@ -46,7 +46,7 @@ def load_model():
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv(r'data\training_data.csv')
+        df = pd.read_csv(r'training_data.csv')
         return df
     except Exception as e:
         st.error(f"Error loading data: {e}")
